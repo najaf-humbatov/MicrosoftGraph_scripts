@@ -17,17 +17,6 @@ Please read the overview article for Microsoft's implementation of Oauth 2.0 dev
 https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-device-code
 #>
 
-<#
-This script to operate with delegated user permissions
-#>
-<#
-script to use Power Shell Az module to extract the logged-in user OnjectID to be operated further down the workflow
-#>
-<#
-#Credentials to be used in script run.
-$creds=Get-Credential
-Connect-AzAccount -Credential $creds
-$ObjId=(Get-AzAdUser -UserPrincipalName $creds.UserName).Id
 #>
 #========Authentication section===========
 Write-Host "PowerShell wrapper for AAD Graph reuqests to work with Unified groups calendars"
